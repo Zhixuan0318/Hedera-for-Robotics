@@ -6,8 +6,7 @@
 
 <br>
 
-![Frame 64 (3)](https://github.com/user-attachments/assets/e769a84d-5d70-47f5-ad36-26d9ffe50a78)
-
+![Frame 64 (5)](https://github.com/user-attachments/assets/78371639-5ed8-4908-aa2f-cdb06f846e2a)
 
 ## Problem Statement
 
