@@ -56,5 +56,7 @@ Here is a concept illustration:
 
 Hence, our team decided to launch Hedera for Robotics as the first B2B Middleware-as-a-Service (MaaS) provider, assisting industries across various sectors with industrial robotic automation by designing and developing a custom API hub. This hub acts like a bridge, which connects all components in their robotic automation setup architecture to the Hedera ecosystem. The benefit of using a custom middleware hub is that all of the important layers in the Web2-based robotic automation systems such as the factory floor (physical hardwares and robotics), IoT connectivity layer, security layer and also control and management layer, able to interact with the blockchain layer component easily (which involve on-chain assets, Hedera services, accounts, smart contract or any on-chain tooling integration). Our hub will now become the common interface for industries to connect all robotic components built by different language, framework, hardware, and communication protocol into a unified Web3 system on Hedera. Below is a high-level architecture overview of a custom hub in a industry robotic setup:
 
+### Introduce the concept of Hub - Architecture Overview
+
 ![Slide11](https://github.com/user-attachments/assets/58a0cd93-d89f-42ed-bbcd-1b7d1bfba962)
 
