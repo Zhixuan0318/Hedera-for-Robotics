@@ -21,3 +21,28 @@ Workflow efficiency suffers due to the complex data integration processes that s
 #### ❌ Security Concerns: 
 
 Security concerns are heightened in Web2 environments, where mutable data is vulnerable to tampering and counterfeiting, which is considered a damage to the supply chain trust. Additionally, the risk of a single point of failure can lead to significant disruptions, cascading through the entire robotic automation operation.
+
+## Inspirations
+
+To address the problems, letting current industries robotic setup to transition and utilise a Hedera-connected distributed data system is a smart move. The intuition behind is simple: Every action taken by a robot in a factory is recorded on the blockchain, making product movement, quality checks, and production steps fully transparent, traceable, verifiable, and tamper-resistant, significantly enhancing security and auditability for all supply chain stakeholders. Our team had included this in our demo video, don't miss it!
+
+#### ⭐ Key Benefits: 
+
+1. Full traceability and auditability
+2. Data are immutable and highly secure
+3. Full flexibility, either partially or fully shifting to Hedera
+4. Smart contracts for automated and secure control of robotic fleet operations
+5. Ready-made Hedera services for on-chain components setup
+6. Resilient robotic network for industry
+7. Vendor independence. No more traditional vendor-locked-in system
+8. Reducing long term cost for Web2 infrastructure maintenance.
+
+## ⚔️ Existing Solutions and Challenges
+
+Existing solutions for implementing robotic automation in industries include a variety of software platforms (such as Gazebo and Webots), industry-specific solutions (like those from ABB, KUKA, and Fanuc), and integration tools (including ROS, AWS IoT, and Microsoft Azure IoT Hub). However, challenges emerge when considering the implementation of Web3 solutions in robotic automated operations. A significant hurdle is that the Hedera ecosystem lacks robotics-related development tools to facilitate the integration of blockchain solutions with existing legacy systems, which are often incompatible.
+
+>  A simple example: while developing a prototype for our demo, we found that no industry-grade robotic simulators offer tools for easily interacting with Hedera events to conduct simulations.
+
+☹️ Although industries can create their own tools or middleware for Web3 integration, this approach can be costly, time-consuming, and resource-intensive. We need a solution to bridge the gap between industry robotic automation (web2 layer) and the Hedera ecosystem (web3 layer).
+
+Here is a concept illustration:
