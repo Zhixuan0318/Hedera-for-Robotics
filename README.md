@@ -84,6 +84,7 @@ As a B2B (business-to-business) service provider, we are proud to be the first t
 
 The implementation prototype we showcase in the demo video is built using the hub architecture concept that we proposed, which able to operate a robotic-powered small scale ecommerce-warehouse supply chain cycle. Further proving the feasibility of utilising Hedera solutions to solve real world industry problem in our project. Below attached is a high-level architecture diagram of our ecommerce-warehouse demo setup, which our custom hub being the most crucial middleware component:
 
+![Slide15](https://github.com/user-attachments/assets/94bbf3ea-68d6-4682-80f9-02bc0f25c1ea)
 
 Clients can connect to our store DApp on Hedera testnet with Wallet Connect to order products. Before the order is confirmed and pass to the fulfilment stage, client will undergo a recipient verification mechanism which will bind his/her identity to the order and able to verify the identity of the recipient during the physical delivery. Client need to connect a World ID to an incognito action which will generate a proof and will verify it with World Cloud Verification, then obtained a nullifier hash representing his identity which will bind to the order. 
 
