@@ -8,7 +8,15 @@
 
 ![Frame 64 (5)](https://github.com/user-attachments/assets/78371639-5ed8-4908-aa2f-cdb06f846e2a)
 
-## Problem Statement
+## 📦 Our Deliverables
+
+1. Our 6 mins+ Demo Video (Youtube) [🌐Watch It!](https://youtu.be/Ip_Jv98Glu8)
+2. Our Pitch Deck (PDF Download) [🌐Read It!]()
+3. Our Demo DApp (Deployed on Hedera Testnet) [🌐Try It!](https://hedera-for-robotics.vercel.app/)
+
+<br>
+
+## 👊 Problem We're Tackling
 
 ![Slide5](https://github.com/user-attachments/assets/ce9a77ac-145f-4aa8-9e67-4141d2f68301)
 
