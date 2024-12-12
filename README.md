@@ -127,6 +127,7 @@ Every supply chain has last mile logistic for the last stage, forming a complete
 
 ## 📸 Some screenshots of our demo DApp mentioned above
 
+![Frame 66](https://github.com/user-attachments/assets/2dd28725-1154-4b19-9bfd-2e8c089274ce)
 
 ## 🔌Connecting local robotic fleet
 
