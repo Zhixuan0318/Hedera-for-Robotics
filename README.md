@@ -96,20 +96,36 @@ The implementation prototype we showcase in the demo video is built using the hu
 
 Clients can connect to our store DApp on Hedera testnet with Wallet Connect to order products. Before the order is confirmed and pass to the fulfilment stage, client will undergo a recipient verification mechanism which will bind his/her identity to the order and able to verify the identity of the recipient during the physical delivery. Client need to connect a World ID to an incognito action which will generate a proof and will verify it with World Cloud Verification, then obtained a nullifier hash representing his identity which will bind to the order. 
 
-Now, the order will be processed by our storefront smart contract and passed to the warehouse smart contract. The warehouse contract assigns a robot for each operation. There are three robots in the setup: a picking robot, a packing robot, and a delivery robot, each powered by its own individual smart contract. Worth mentioning, all smart contract automated components were setup using Hedera Smart Contract Service (HSCS). The native Hedera randomness precompile then is used to select one robot from the fleet for each operation, a process known as load balancing.
+![image](https://github.com/user-attachments/assets/c5437517-f742-4370-94f2-5ce36dd85ec9)
+
+Now, the order will be processed by our storefront smart contract and passed to the warehouse smart contract. The warehouse contract assigns a robot for each operation. There are three robots in the setup: a picking robot, a packing robot, and a delivery robot, each powered by its own individual smart contract. Worth mentioning, all smart contract automated components were setup using Hedera Smart Contract Service (HSCS). 
+
+![image](https://github.com/user-attachments/assets/a152627f-1e5a-424e-bb11-12f82bbc8654)
+
+The native Hedera randomness precompile then is used to select one robot from the fleet for each operation, a process known as load balancing.
 
 So, with our hub, industry can directly plug and play different professional simulators and test the whole operation with the integration of Hedera. For our demo, we designed a warehouse operation that includes picking, packing, and delivering. We built a simulation using Webot and embedded it in our demo for seamless interaction with Hedera. When each robot completes a task in the simulation, it logs the action on Hedera, and the warehouse will trigger the next operation. For example, when a client orders a green cube, the picking order is assigned to a picking robot on Hedera, and the picking robot in the simulation will perform the task. After each robot completes its assigned task, it logs the action on Hedera, and the warehouse contract triggers the next packing operation.
 
+![image](https://github.com/user-attachments/assets/08448b21-d20e-4892-9563-b696248dc3fb)
+
 In a Human-Robot Collaborative Environment, which requires close supervision from human operators (for example, quality checks on tasks performed by robots), post-action approvals can be facilitated using a multi-signature mechanism on Hedera, creating an efficient feedback loop in a checkpoint-based workflow. For example, when the packing task is completed by the packing robot, a human operator with their own EOA (Externally Owned Account) will act as the Activity Verifier and verify the action. Only when all approvals are made for every phase in the warehouse order fulfillment workflow is the cycle considered complete.
+
+![image](https://github.com/user-attachments/assets/335e473f-116a-4446-87bc-77780a72c6da)
 
 Finally, once the order is fulfilled, a lifecycle report is generated and stored on the Hedera File Service (HFS). The lifecycle report is a JSON file that acts as a comprehensive receipt, recording every event from start to finish, along with general order information.
 
+![image](https://github.com/user-attachments/assets/c19af088-ac69-43b5-be77-e10e5cf6b65c)
+
 Our eCommerce store sells three products, which serve as the inventory items for this setup. Our team manages the inventory by tokenizing each product into collections with Hedera Token Service (HTS). This is a valuable implementation for industries that want to tokenize their inventory, such as stocks, products, or raw materials, providing a digital twin representation on Hedera. We manage stock levels using a hybrid on-off-chain approach, which allows clients to hold products in their cart, and once the order is completed, the off-chain stock level is updated on-chain.
+
+![image](https://github.com/user-attachments/assets/eb90f246-5556-4019-8e56-1426ddf18750)
 
 Every supply chain has last mile logistic for the last stage, forming a complete close loop cycle. Hence, to enhance the transparency of this process and carried out with the help of Hedera technology, we created a consensus based attestation mechanism with Hedera Consensus Service (an innovative approach which is different from common EAS based attestation), named ADDA, Attestation Driven Distribution Assurance. It consist of two stages: pre-attestation and attestation. First, we perform a pre-attestation check with World ID, which is a smart way to ensure the logistic do deliver, and also the recipient is the real recipient. Then, both of them will upload their proof of delivery to Hedera File Service. The photo evidence, lifecycle report, together with the opposite party identity info will form the message schema and broadcast to their respective private topic for consensus. 
 
 
 ### 🔌Connecting local robotic fleet
+
+![image](https://github.com/user-attachments/assets/726bcf2d-a4ad-4722-be6f-89860826edfa)
 
 To further validate the feasibility of our implementation, we also perform testing on a physical robot, which we refer to as a local robotic fleet. The system is centered around the Hub as well, enabling industries to interact with an IoT connectivity layer (refer to above architecture overview). This layer acts as an intermediary between the robotic fleet and the Hub, which is integrated with the Hedera blockchain layer. The IoT connectivity layer can incorporate various technologies such as AWS IoT Core, Microsoft Azure IoT, Oracle IoT cloud, and MQTT-based solutions like RabbitMQ or Kafka, etc. 
 
