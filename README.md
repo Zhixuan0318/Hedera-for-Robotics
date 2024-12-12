@@ -34,11 +34,11 @@ Workflow efficiency suffers due to the complex data integration processes that s
 
 Security concerns are heightened in Web2 environments, where mutable data is vulnerable to tampering and counterfeiting, which is considered a damage to the supply chain trust. Additionally, the risk of a single point of failure can lead to significant disruptions, cascading through the entire robotic automation operation.
 
-## Inspirations
+## 💡 Inspirations: Really Motivated Us!
 
 To address the problems, letting current industries robotic setup to transition and utilise a Hedera-connected distributed data system is a smart move. The intuition behind is simple: Every action taken by a robot in a factory is recorded on the blockchain, making product movement, quality checks, and production steps fully transparent, traceable, verifiable, and tamper-resistant, significantly enhancing security and auditability for all supply chain stakeholders. Our team had included this in our demo video, don't miss it!
 
-#### ⭐ Key Benefits: 
+#### ⭐ Key Benefits for Industries: 
 
 1. Full traceability and auditability
 2. Data are immutable and highly secure
@@ -55,7 +55,7 @@ Existing solutions for implementing robotic automation in industries include a v
 
 >  A simple example: while developing a prototype for our demo, we found that no industry-grade robotic simulators offer tools for easily interacting with Hedera events to conduct simulations.
 
-☹️ Although industries can create their own tools or middleware for Web3 integration, this approach can be costly, time-consuming, and resource-intensive. We need a solution to bridge the gap between industry robotic automation (web2 layer) and the Hedera ecosystem (web3 layer).
+☹️☹️☹️ Although industries can create their own tools or middleware for Web3 integration, this approach can be costly, time-consuming, and resource-intensive. We need a solution to bridge the gap between industry robotic automation (web2 layer) and the Hedera ecosystem (web3 layer).
 
 Here is a concept illustration:
 
