@@ -14,6 +14,9 @@
 2. Our Pitch Deck (PDF Download) [🌐Read It!]()
 3. Our Demo DApp (Deployed on Hedera Testnet) [🌐Try It!](https://hedera-for-robotics.vercel.app/)
 
+### Extra: Code Submission Breakdown 📃
+For the convenience of the technical judges, our team has organized the code submission by breaking down the structure and providing descriptions for each folder and important files. You can access the documentation folder [🌐here]() !
+
 <br>
 
 ## 👊 Problem We're Tackling
@@ -122,8 +125,10 @@ Our eCommerce store sells three products, which serve as the inventory items for
 
 Every supply chain has last mile logistic for the last stage, forming a complete close loop cycle. Hence, to enhance the transparency of this process and carried out with the help of Hedera technology, we created a consensus based attestation mechanism with Hedera Consensus Service (an innovative approach which is different from common EAS based attestation), named ADDA, Attestation Driven Distribution Assurance. It consist of two stages: pre-attestation and attestation. First, we perform a pre-attestation check with World ID, which is a smart way to ensure the logistic do deliver, and also the recipient is the real recipient. Then, both of them will upload their proof of delivery to Hedera File Service. The photo evidence, lifecycle report, together with the opposite party identity info will form the message schema and broadcast to their respective private topic for consensus. 
 
+## 📸 Some screenshots of our demo DApp mentioned above
 
-### 🔌Connecting local robotic fleet
+
+## 🔌Connecting local robotic fleet
 
 ![image](https://github.com/user-attachments/assets/726bcf2d-a4ad-4722-be6f-89860826edfa)
 
