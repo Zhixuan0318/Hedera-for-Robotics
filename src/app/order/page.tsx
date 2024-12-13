@@ -34,17 +34,13 @@ function OrderInfo() {
         async (stage: number) => {
             if (!address || !order) return;
             if (simulationMethod == 'local' && stage != 1) {
-                const color =
-                    order?.productId == 0 ? 'green' : order?.productId == 1 ? 'purple' : 'blue';
-
-                await fetch(`${ngrokUrl}/api/scenario${stage - 1}`, {
+                await fetch(`/api/robot/simulate`, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
                     body: JSON.stringify({
+                        productId: order.productId,
+                        ngrokUrl,
+                        stage,
                         orderId: orderId,
-                        boxColour: color,
                         address,
                     }),
                 });
