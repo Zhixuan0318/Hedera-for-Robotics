@@ -11,7 +11,7 @@
 ## 📦 Our Deliverables
 
 1. Our 6 mins+ Demo Video (Youtube) [🌐Watch It!](https://youtu.be/Ip_Jv98Glu8)
-2. Our Pitch Deck (PDF Download) [🌐Read It!]()
+2. Our Pitch Deck (PDF Download) [🌐Read It!](https://drive.google.com/file/d/1o7NXBe10mUoDqkI2Ot6sF4FWWP2kBQTD/view?usp=sharing)
 3. Our Demo DApp (Deployed on Hedera Testnet) [🌐Try It!](https://hedera-for-robotics.vercel.app/)
 
 ### Extra: Code Submission Breakdown 📃
