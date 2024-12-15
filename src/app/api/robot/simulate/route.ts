@@ -5,7 +5,7 @@ export const maxDuration = 60;
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        if (!body.productId) throw new Error('No product id');
+        if (body.productId == undefined) throw new Error('No product id');
         if (!body.ngrokUrl) throw new Error('No ngrokUrl');
         if (!body.stage) throw new Error('No stage');
         if (!body.orderId) throw new Error('No orderId');
