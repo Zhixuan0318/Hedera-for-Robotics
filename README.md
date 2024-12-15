@@ -15,7 +15,7 @@
 3. Our Demo DApp (Deployed on Hedera Testnet) [🌐Try It!](https://hedera-for-robotics.vercel.app/)
 
 ### Extra: Code Submission Breakdown 📃
-For the convenience of the technical judges, our team has organized the code submission by breaking down the structure and providing descriptions for each folder and important files. You can access the documentation folder [🌐here]() !
+For the convenience of the technical judges, our team has organized the code submission by breaking down the structure and providing descriptions for each folder and important files. You can access the documentation folder [🌐here](https://github.com/Zhixuan0318/Hedera-for-Robotics/tree/main/doc#code-submission-breakdown) !
 
 <br>
 
