@@ -8,6 +8,8 @@ import { ConfettiButton } from '../ui/confetti';
 
 import { useEffect, useRef, useState } from 'react';
 import { useAccount } from 'wagmi';
+import { useToast } from '@/hooks/use-toast';
+
 import contractIds from '@/data/contract-ids';
 
 interface Props {
@@ -18,6 +20,8 @@ interface Props {
 
 export default function Evidence({ order, side, updateOrderInList }: Props) {
     const [uploading, setUploading] = useState(false);
+    const { toast } = useToast();
+
     const { address } = useAccount();
 
     const isReceiver = useRef(side == 'receiver');
@@ -95,6 +99,16 @@ export default function Evidence({ order, side, updateOrderInList }: Props) {
                                 return;
                             }
 
+                            console.log();
+
+                            if (event.target.files[0].size / 1024 > 6) {
+                                toast({
+                                    title: 'Uh oh! Something went wrong.',
+                                    description: 'The uploaded image size should be less than 6kB',
+                                });
+                                return;
+                            }
+
                             setUploading(true);
 
                             const file = event.target.files[0];
@@ -108,14 +122,19 @@ export default function Evidence({ order, side, updateOrderInList }: Props) {
                             });
 
                             const json = await response.json();
-                            copy.attestation = {
-                                ...copy.attestation,
-                                [side]: {
-                                    id: '',
-                                    cid: json.cid,
-                                },
-                            };
-                            updateOrderInList(copy.orderId as string, copy as Order);
+
+                            if (response.status != 200) alert(json.error);
+                            else {
+                                copy.attestation = {
+                                    ...copy.attestation,
+                                    [side]: {
+                                        id: '',
+                                        cid: json.cid,
+                                    },
+                                };
+                                updateOrderInList(copy.orderId as string, copy as Order);
+                            }
+
                             setUploading(false);
                         }}
                     />

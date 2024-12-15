@@ -13,8 +13,9 @@ import { useMemo, useRef, useEffect } from 'react';
 
 import Firebase from '@/services/Database';
 
-import './attestation.css';
 import contractIds from '@/data/contract-ids';
+
+import './attestation.css';
 
 function Attestation() {
     const searchParams = useSearchParams();

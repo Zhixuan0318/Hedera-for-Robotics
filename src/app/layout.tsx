@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { headers } from 'next/headers';
 
+import { Toaster } from '@/components/ui/toaster';
+
 import WalletProvider from '@/context/WalletProvider';
 import { OrdersProvider } from '@/context/OrdersProvider';
 
@@ -32,7 +34,10 @@ export default function RootLayout({
         <html lang='en'>
             <WalletProvider cookies={cookies}>
                 <OrdersProvider>
-                    <body className={styreneA.className}>{children}</body>
+                    <body className={styreneA.className}>
+                        {children}
+                        <Toaster />
+                    </body>
                 </OrdersProvider>
             </WalletProvider>
         </html>
