@@ -9,9 +9,9 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
         if (!body.orderId) throw new Error('No order id was provided');
         if (!body.robotId) throw new Error('No robot id was provided');
-        if (!body.address) throw new Error('No robot id was provided');
+        if (!body.address) throw new Error('No address was provided');
 
-        await processStage(body.orderId, body.stage, body.address);
+        await processStage(body.orderId, Number(body.robotId) + 1, body.address);
 
         return NextResponse.json({}, { status: 200 });
     } catch (error: any) {
