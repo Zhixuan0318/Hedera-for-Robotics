@@ -63,7 +63,7 @@ Our team's code submission able to split into **three major parts** in our demo:
 
 ```
 
-### DApp-Demo `src` Folder Description
+## DApp-Demo `src` Folder Description
 
 📂`app/api/hedera`: APIs related to interaction with Hedera Consensus Service (for ADDA mechanism), Hedera File Service (for lifecycle report and photo evidence), and tokenization of three products with Hedera Token Service.
 
@@ -98,3 +98,39 @@ Our team's code submission able to split into **three major parts** in our demo:
 📂`services`: All firebase db interaction
 
 📂`utils`: Hedera File Service (generating lifecycle report), owner account, customer info random generator (built for faster demo purpose), unique off-chain order reference generator: using user wallet address and time
+
+## hedera-contracts/
+
+All contracts are deployed on Hedera Testnet
+
+- `Robots.sol`
+    - **picking robot:** 0.0.5172117 / 0xfce3D945Ef4e749e2AEE405eAD006715eE6884c8 [🌐Hashscan](https://hashscan.io/testnet/contract/0.0.5172117?pf=1)
+    - **packing robot:** 0.0.5172119 / 0xF2CC729Ab0AE4883d71d1dA6bFbE48f8c78b20bB [🌐Hashscan](https://hashscan.io/testnet/contract/0.0.5172119?pf=1)
+    - **delivering robot:** 0.0.5172121 / 0x089645AECD9d00016Da8C30F74868CE2E3E7dA4f [🌐Hashscan](https://hashscan.io/testnet/contract/0.0.5172121?pf=1)
+- `Shop.sol`: 0.0.5172114 / 0xCf670989577b0a0EbD93eE2104cABbF9bFFdfCe7 [🌐Hashscan](https://hashscan.io/testnet/contract/0.0.5172114?pf=1)
+- `Warehouse.sol`: 0.0.5172115 / 0x2Fa30a9845Ae90914594882def5718C6B2420693 [🌐Hashscan](https://hashscan.io/testnet/contract/0.0.5172115?pf=1)
+- utils/`WarehouseManager.sol`
+- interfaces
+- scripts (deploy,verify)
+
+## Robot-Sim Folder Description
+
+#### robot-controllers/
+
+This folder contain the controller system of each individual robot which define their operations in the warehouse. Robot 1,2,3 representing picking, packing, and delivering.
+
+#### connectivity-layer-server/
+
+Containing the flask server acting as the connectivity layer. Using ngrok tunneling to connect.
+
+#### robot-status-memory/
+
+Acting as a simple robot temp memory for demo purpose.
+
+#### robot-part-stl/
+
+Containing all the robotic parts use for simulation purpose in the showcase.
+
+#### webot-world-setup/
+
+Containing the warehouse 3D scene our team setup for simulation purpose in the showcase. In the format of wbt file.
