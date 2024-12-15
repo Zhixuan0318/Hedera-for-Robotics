@@ -103,6 +103,9 @@ Clients can connect to our store DApp on Hedera testnet with Wallet Connect to o
 
 Now, the order will be processed by our storefront smart contract and passed to the warehouse smart contract. The warehouse contract assigns a robot for each operation. There are three robots in the setup: a picking robot, a packing robot, and a delivery robot, each powered by its own individual smart contract. Worth mentioning, all smart contract automated components were setup using Hedera Smart Contract Service (HSCS). 
 
+> [🌐Here](https://github.com/Zhixuan0318/Hedera-for-Robotics/tree/main/doc#hedera-contracts) are all the smart contract info and ID (or addresses). We have link to Hashscan❤️ 
+<br>
+
 ![image](https://github.com/user-attachments/assets/a152627f-1e5a-424e-bb11-12f82bbc8654)
 
 The native Hedera randomness precompile then is used to select one robot from the fleet for each operation, a process known as load balancing.
@@ -121,9 +124,22 @@ Finally, once the order is fulfilled, a lifecycle report is generated and stored
 
 Our eCommerce store sells three products, which serve as the inventory items for this setup. Our team manages the inventory by tokenizing each product into collections with Hedera Token Service (HTS). This is a valuable implementation for industries that want to tokenize their inventory, such as stocks, products, or raw materials, providing a digital twin representation on Hedera. We manage stock levels using a hybrid on-off-chain approach, which allows clients to hold products in their cart, and once the order is completed, the off-chain stock level is updated on-chain.
 
+#### 👇 View the tokenized products on Hashscan 👇
+
+- Green Cube: 0.0.5172085 [🌐Hashscan](https://hashscan.io/testnet/token/0.0.5172085)
+- Purple Cube: 0.0.5172087 [🌐Hashscan](https://hashscan.io/testnet/token/0.0.5172087)
+- Blue Cube: 0.0.5172088 [🌐Hashscan](https://hashscan.io/testnet/token/0.0.5172088)
+  
+<br>
+
 ![image](https://github.com/user-attachments/assets/eb90f246-5556-4019-8e56-1426ddf18750)
 
 Every supply chain has last mile logistic for the last stage, forming a complete close loop cycle. Hence, to enhance the transparency of this process and carried out with the help of Hedera technology, we created a consensus based attestation mechanism with Hedera Consensus Service (an innovative approach which is different from common EAS based attestation), named ADDA, Attestation Driven Distribution Assurance. It consist of two stages: pre-attestation and attestation. First, we perform a pre-attestation check with World ID, which is a smart way to ensure the logistic do deliver, and also the recipient is the real recipient. Then, both of them will upload their proof of delivery to Hedera File Service. The photo evidence, lifecycle report, together with the opposite party identity info will form the message schema and broadcast to their respective private topic for consensus. 
+
+#### 👇 View the private topics on Hashscan 👇
+
+- 3PL (Third Party Logistics): 0.0.5180824 [🌐Hashscan](https://hashscan.io/testnet/topic/0.0.5180824)
+- Recipient: 0.0.5180826 [🌐Hashscan](https://hashscan.io/testnet/topic/0.0.5180826)
 
 ## 📸 Some screenshots of our demo DApp mentioned above
 
